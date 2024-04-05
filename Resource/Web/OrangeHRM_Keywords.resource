@@ -13,24 +13,24 @@ Logout Admn Portal
 Users at the OrangeHRM Login Page at this "${URL}"
     OrangeHRMHomePage.Load                          ${URL}
     OrangeHRMHomePage.Verify Home Page Is Loaded
-    Common.Capture Full Page Screenshot             Home Page
+    Common.Capture Full Page Screenshot             Home Page_
 
 User login to OrangeHRM Admin Portal with Username "${UserName}" and Password "${Password}"
     OrangeHRMHomePage.Login into Admin Portal   ${UserName}     ${Password}
 
 After login verify the Admin page is load completed
     OrangeHRMHomePage.Verify Admin Page Is Loaded      Dashboard
-    Common.Capture Full Page Screenshot                 Dashboard Page
+    Common.Capture Full Page Screenshot                Dashboard Page_
 
 User at My Info page
     OrangeHRMHomePage.Verify Admin Page Is Loaded   Dashboard
-    Common.Capture Screenshot               My Info Page
+    Common.Capture Full Page Screenshot             My Info Page_
 
 User proceed to logout
     OrangeHRMHomePage.Click Profile Icon
     OrangeHRMHomePage.Click Logout button
     OrangeHRMHomePage.Verify Home Page Is Loaded
-    Common.Capture Screenshot               Successful Logout
+    Common.Capture Full Page Screenshot     Successful Logout_
 
 Vefiy user is successful log out back to Login page
     OrangeHRMHomePage.Verify Home Page Is Loaded

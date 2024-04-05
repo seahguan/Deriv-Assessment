@@ -14,7 +14,7 @@ ${Browser}      Chrome
 ${URL}          https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 ${UserName}     Admin
 ${Password}     admin123
-${New_DOB}      2024-31-01
+${New_DOB}      2024-28-02
 
 
 *** Test Cases ***
@@ -33,11 +33,6 @@ Update User Profile DOB
     Then verify the DOB field is filled
     Then update DOB to new DOB value "${New_DOB}"
     Then Verify updated DOB with new DOB "${New_DOB}"
-#    Click admin sidebar "My Info"
-#    Vefiry My Info Page have "Personal Details"
-#    Verify the DOB field is filled If not then fill in "1999-04-01"
-#    Save the updated DOB
-#    Verify updated DOB
 
 Logout OrangeHRM Portal
     [Documentation]     Logout from OrangeHRM

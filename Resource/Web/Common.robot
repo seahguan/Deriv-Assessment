@@ -1,11 +1,11 @@
 *** Settings ***
-Library  SeleniumLibrary
-Library  OperatingSystem
-
+Library     SeleniumLibrary
+Library     OperatingSystem
 
 
 *** Variables ***
 ${OUTPUT_DIR}       ../../Results/
+${IMAGE_PATH}       ../../Results/WEB/Image/
 
 
 *** Keywords ***
@@ -24,7 +24,7 @@ End of Web Test
 Capture Screenshot
     [Documentation]    Capture a screenshot and save it to the output directory
     [Arguments]    ${description}
-    ${screenshot_path}=    Set Variable    ${output_dir}/screenshot_${description}.png
+    ${screenshot_path}=    Set Variable    ${output_dir}/Image/screenshot_${description}.png
     Capture Page Screenshot    ${screenshot_path}
     Log    Saved screenshot: ${screenshot_path}
 
@@ -37,7 +37,6 @@ Capture Full Page Screenshot
     FOR    ${i}    IN RANGE   ${scroll_height}
         Scroll Window    0    ${screenshot_height}
         Capture Page Screenshot    ${file_path}${i}.png
-        Capture Screenshot    ${file_path}${i}.png
     END
 
 Scroll Window
